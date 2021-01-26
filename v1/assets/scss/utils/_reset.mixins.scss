@@ -1,0 +1,9 @@
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+@mixin reset-list() {
+  list-style: none;
+  @include flexbox();
+}

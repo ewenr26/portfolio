@@ -1,0 +1,56 @@
+@import "./utils/fontface.mixin";
+
+@include fontface(
+  "PlusJakartaSans",
+  "../fonts/PlusJakartaSans-Light",
+  300,
+  normal,
+  "woff"
+);
+@include fontface(
+  "PlusJakartaSans",
+  "../fonts/PlusJakartaSans-LightItalic",
+  300,
+  italic,
+  "woff"
+);
+
+@include fontface(
+  "PlusJakartaSans",
+  "../fonts/PlusJakartaSans-Regular",
+  400,
+  normal,
+  "woff"
+);
+
+@include fontface(
+  "PlusJakartaSans",
+  "../fonts/PlusJakartaSans-Medium",
+  500,
+  normal,
+  "woff"
+);
+
+@include fontface(
+  "PlusJakartaSans",
+  "../fonts/PlusJakartaSans-MediumItalic",
+  500,
+  italic,
+  "woff"
+);
+
+@include fontface(
+  "PlusJakartaSans",
+  "../fonts/PlusJakartaSans-Bold",
+  600,
+  normal,
+  "woff"
+);
+
+@include fontface(
+  "PlusJakartaSans",
+  "../fonts/PlusJakartaSans-BoldItalic",
+  600,
+  italic,
+  "woff"
+);

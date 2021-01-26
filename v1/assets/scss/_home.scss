@@ -1,0 +1,50 @@
+.e-home {
+  height: 100vh;
+  @include flexbox();
+  @include justify-content(center);
+  @include align-items(center);
+
+  &__container {
+    @include flexbox();
+    @include flex-direction(column);
+    @include align-items(center);
+  }
+
+  &--mac {
+    width: 150px;
+    height: auto;
+  }
+
+  &--subtitle {
+    font-size: 2.25rem;
+    font-weight: 500;
+  }
+
+  &--title {
+    font-size: 3rem;
+    font-weight: 600;
+    max-width: 500px;
+    text-align: center;
+
+    span {
+      position: relative;
+
+      &::before {
+        content: url("../img/home-ligne.svg");
+        position: absolute;
+        bottom: -1rem;
+        left: -0.5rem;
+      }
+    }
+  }
+  &--body {
+    font-size: 1.5rem;
+    img {
+      width: 40px;
+      height: auto;
+    }
+  }
+  &--arrow {
+    margin: 4rem 0 0 0;
+  }
+}

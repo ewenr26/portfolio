@@ -1,0 +1,86 @@
+.e-services {
+  height: 100vh;
+  width: 50%;
+  @media screen and (max-width: 1100px) {
+    width: 100%;
+  }
+  margin: auto;
+  @include flexbox();
+  @include flex-direction(column);
+  @include align-items(center);
+  @include justify-content(stretch);
+
+  * {
+    @include flex-grow(1);
+    @include flex-basis(0);
+  }
+
+  &--title {
+    font-size: 2.5rem;
+    position: relative;
+    &::before {
+      content: url("../img/services-line.svg");
+      position: absolute;
+      bottom: -1rem;
+      left: 0.5rem;
+    }
+  }
+
+  &__container {
+    position: relative;
+    @include flexbox();
+    width: 1100px;
+
+    @media screen and (max-width: 1100px) {
+      width: auto;
+    }
+  }
+
+  &--categories {
+    @include flexbox();
+    @include justify-content(center);
+    @include align-items(center);
+
+    @media screen and (max-width: 1100px) {
+      @include flex-direction(column);
+    }
+  }
+
+  &--titleContainer {
+    @include flexbox();
+    @include justify-content(center);
+    @include align-items(center);
+  }
+
+  &--categorie {
+    margin-left: 3rem;
+
+    @media screen and (max-width: 1100px) {
+      margin-left: 0;
+    }
+
+    background-color: #fff;
+    z-index: 10;
+    padding: 2rem;
+    img {
+      width: 50px;
+      height: auto;
+    }
+    h1 {
+      font-size: 1.75rem;
+      font-weight: 500;
+    }
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  &--background {
+    background-image: url("../img/test.svg");
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75%;
+  }
+}

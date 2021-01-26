@@ -1,0 +1,17 @@
+@import "./variables";
+
+@import "./utils/flex.mixins";
+@import "./utils/reset.mixins";
+@import "./components/hamburger.mixin";
+@import "./fonts";
+@import "./navigation";
+
+@import "./home";
+@import "./services";
+@import "./resume";
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "PlusJakartaSans";
+}

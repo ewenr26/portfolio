@@ -1,0 +1,43 @@
+.e-navigation {
+  height: $nav-height;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 4%;
+  @include flexbox();
+  position: absolute;
+
+  &__left,
+  &__right {
+    @include flex-grow(1);
+    @include flexbox();
+    @include align-items(center);
+  }
+
+  &__left {
+    @include justify-content(flex-start);
+  }
+
+  &__right {
+    @include justify-content(flex-end);
+  }
+
+  &__actions {
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+    @include reset-list();
+    li {
+      margin-left: 60px;
+    }
+    li:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &__mobile {
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+    @include hamburger();
+  }
+}
