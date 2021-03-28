@@ -18,7 +18,7 @@
   &--title {
     font-size: 2.5rem;
     position: relative;
-    &::before {
+    &::after {
       content: url("../img/services-line.svg");
       position: absolute;
       bottom: -1rem;
@@ -50,6 +50,7 @@
     @include flexbox();
     @include justify-content(center);
     @include align-items(center);
+    @include flex-grow(0.5);
   }
 
   &--categorie {
@@ -82,5 +83,17 @@
     left: 50%;
     transform: translateX(-50%);
     width: 75%;
+  }
+
+  &__arrow {
+    &--container {
+      @include flex-grow(0.5);
+      @include flexbox();
+      @include justify-content(center);
+      @include align-items(center);
+    }
+    &--icon {
+      animation: bounce 3s ease-in-out infinite;
+    }
   }
 }

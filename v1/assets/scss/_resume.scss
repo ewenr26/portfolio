@@ -1,6 +1,6 @@
 .e-resume {
   height: 100vh;
-  width: 50%;
+  width: 1100px;
   @media screen and (max-width: 1100px) {
     width: 100%;
   }
@@ -9,6 +9,14 @@
   @include flex-direction(column);
   @include align-items(center);
   @include justify-content(stretch);
+
+  &--column,
+  &--titleContainer,
+  &--columns,
+  &__arrow--container {
+    @include flex-grow(1);
+    @include flex-basis(0);
+  }
 
   &--title {
     font-size: 2.5rem;
@@ -22,11 +30,159 @@
     }
   }
 
+  &--titleContainer {
+    @include flex-grow(0.25);
+    @include flexbox();
+    @include align-items(center);
+    @include justify-content(center);
+  }
+
   &--columns {
     width: 100%;
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+  }
+
+  &--column {
+    @include flexbox();
+    @include flex-direction(column);
+  }
+
+  &--large {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  &__row {
+    &--title {
+      font-weight: normal;
+      font-size: 2rem;
+      position: relative;
+    }
+
+    &--body {
+      margin-left: 2rem;
+      @include flex-grow(1);
+      @include flex-basis(0);
+
+      @include flexbox();
+      @include flex-direction(column);
+    }
+    &--education {
+      &::after {
+        content: url("../img/education-line.svg");
+        position: absolute;
+        bottom: -1rem;
+        left: -0.25rem;
+      }
+    }
+    &--workExperiences {
+      &::after {
+        content: url("../img/work-experience-line.svg");
+        position: absolute;
+        bottom: -1rem;
+        left: -0.25rem;
+      }
+    }
+    &--skills {
+      &Title {
+        &::after {
+          content: url("../img/skills-line.svg");
+          position: absolute;
+          bottom: -1rem;
+          left: -0.25rem;
+        }
+      }
+    }
+    &--tools {
+      &::after {
+        content: url("../img/tools-line.svg");
+        position: absolute;
+        bottom: -1rem;
+        left: -0.25rem;
+      }
+    }
+  }
+
+  &__bodyRow {
+    @include flex-grow(0);
+    @include flex-basis(0);
+    margin-top: 1.5rem;
+
+    &--title,
+    &--place,
+    &--dates,
+    &--stack {
+      font-weight: normal;
+      margin-bottom: 0.75rem;
+    }
+
+    &--title {
+      font-size: 1.5rem;
+    }
+
+    &--place,
+    &--stack {
+      font-size: 1rem;
+    }
+
+    &--dates {
+      font-size: 0.9rem;
+      opacity: 50%;
+    }
+
+    &--inner {
+      display: inline-block;
+      position: relative;
+    }
+
+    &--arrow {
+      position: absolute;
+      top: calc(1rem / 2);
+      right: -2rem;
+      transition: 0.4s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+    }
+
+    &--inner:hover &--arrow {
+      transform: translate(0.25rem, -0.25rem);
+    }
+  }
+
+  &__arrow {
+    &--container {
+      @include flex-grow(0.25);
+      @include flexbox();
+      @include justify-content(center);
+      @include align-items(center);
+    }
+
+    &--icon {
+      animation: bounce 3s ease-in-out infinite;
+    }
+  }
+
+  &__skills {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    &--column {
+      &Title {
+        font-weight: 500;
+      }
+
+      &Title {
+        font-size: 1.25rem;
+      }
+
+      &Text {
+        font-size: 1rem;
+        font-weight: lighter;
+      }
+    }
   }
 }

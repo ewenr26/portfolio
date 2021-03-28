@@ -1,5 +1,6 @@
 @import "./variables";
 
+@import "./utils/animations";
 @import "./utils/flex.mixins";
 @import "./utils/reset.mixins";
 @import "./components/hamburger.mixin";
@@ -9,6 +10,11 @@
 @import "./home";
 @import "./services";
 @import "./resume";
+@import "./contact";
+
+html {
+  font-size: 13px;
+}
 
 * {
   margin: 0;
