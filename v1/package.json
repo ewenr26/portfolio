@@ -4,11 +4,13 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "parcel index.html",
-    "build": "parcel build index.html"
+    "dev": "sass --watch assets/scss/index.scss assets/css/index.css",
+    "build": "sass assets/scss/index.scss assets/css/index.css --style compressed"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.12.4",
     "sass": "^1.30.0"
-  }
+  },
+  "browserslist": [
+    "last 1 Chrome versions"
+  ]
 }
