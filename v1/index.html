@@ -11,10 +11,15 @@
   <body>
     <nav class="e-navigation">
       <div class="e-navigation__left">
-        <img src="assets/img/mail.svg" alt="Mail Icon" />
+        <img
+          class="scrollTo"
+          src="assets/img/mail.svg"
+          alt="Mail Icon"
+          data-to="#Contact"
+        />
       </div>
       <div class="e-navigation__right">
-        <ul class="e-navigation__actions">
+        <ul id="navigationMenu" class="e-navigation__actions">
           <li class="e-navigation__actions--link">
             <a href="#Contact">Contact</a>
           </li>
@@ -26,7 +31,7 @@
         </div>
       </div>
     </nav>
-    <section class="e-home">
+    <section class="e-home" id="Home">
       <div class="e-home__container">
         <img
           class="e-home--mac"
@@ -42,13 +47,14 @@
           <img src="assets/img/france-flag.png" alt="France flag" />
         </p>
         <img
-          class="e-home--arrow"
+          class="e-home--arrow scrollTo"
+          data-to="#Contact"
           src="assets/img/arrow.svg"
           alt="Arrow down"
         />
       </div>
     </section>
-    <section class="e-contact">
+    <section class="e-contact" id="Contact">
       <div class="e-contact--titleContainer">
         <h2 class="e-contact--title">Contact</h2>
       </div>
